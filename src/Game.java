@@ -35,9 +35,11 @@ public class Game extends Engine {
 
     public void platformCollision(int[] player, Platform platform){
         int[] platformPosition = platform.getPlatformCollision();
-        if (player[1] + player[3] > platformPosition[1] && this.player.getSpeedY() >= 0){
+        if (player[1] + player[3] + this.player.getSpeedY() >= platformPosition[1] && this.player.getSpeedY() >= 0){
             this.player.setSpeedY(0);
-            this.player.setGrounded(true);}
+            this.player.setGrounded(true);
+            this.player.setPositionY(platformPosition[1]- player[3]);
+        }
     }
 }
 

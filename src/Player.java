@@ -8,12 +8,13 @@ public class Player {
     private int width = 32;
     private int height = 64 ;
     private int x = 50;
-    private int y = 100;
+    private int y = 500;
     private int movementSpeed = 1;
-    private int jumpSpeed = -20;
+    private int jumpSpeed = -15;
     private int gravity = 1;
     private int maxFallingSpeed = 10;
     private boolean grounded;
+    private int holdJump;
     private int speedX = 0;
     private int speedY = 0;
     private int speedCap = 7;
@@ -41,7 +42,15 @@ public class Player {
         if (keys.contains(KeyEvent.VK_SPACE) && grounded) {
             speedY = jumpSpeed;
             grounded = false;
+
         }
+        if (keys.contains(KeyEvent.VK_SPACE) ){
+            holdJump++;
+            if(holdJump > 2){
+                holdJump = 0;
+                speedY -= gravity;
+            }
+        }else holdJump = 0;
         if (speedY <= maxFallingSpeed)speedY += gravity;
 
 
@@ -73,6 +82,9 @@ public class Player {
     }
     public void setGrounded(boolean change){
         grounded = change;
+    }
+    public void setPositionY(int newPosition){
+        y = newPosition;
     }
 
 }
