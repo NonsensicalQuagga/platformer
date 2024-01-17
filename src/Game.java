@@ -15,21 +15,29 @@ public class Game extends Engine {
     public void update() {
         int[] playerPosition = player.getPosition();
 
-        player.updatePlayer(keys);
+        player.updatePlayerSpeed(keys);
+        for(Platform i : platforms){
+            platformCollision(playerPosition, i);
+
+        }
+        player.updatePlayer();
 
         }
 
     public void draw(Graphics g){
         g.clearRect(0, 0, getWidth(), getHeight());
-
-        player.drawPlayer(g);
         for(Platform i : platforms){
             i.drawPlatform(g);
             }
+
+        player.drawPlayer(g);
         }
 
-    public void platformCollision(){
-
+    public void platformCollision(int[] player, Platform platform){
+        int[] platformPosition = platform.getPlatformCollision();
+        if (player[1] + player[3] > platformPosition[1] && this.player.getSpeedY() >= 0){
+            this.player.setSpeedY(0);
+            this.player.setGrounded(true);}
     }
 }
 

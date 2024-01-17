@@ -119,6 +119,7 @@ public class Engine extends Canvas implements Runnable {
         @Override
         public void keyPressed(KeyEvent e) {
             keys.add( e.getKeyCode());
+
         }
 
         @Override

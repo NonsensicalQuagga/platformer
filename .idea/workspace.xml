@@ -1,19 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="277aecc0-58ea-498e-b8d1-4b326cc23209" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/image/icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/platformer.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Engine.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Game.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Platform.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Player.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Start.java" afterDir="false" />
+    <list default="true" id="277aecc0-58ea-498e-b8d1-4b326cc23209" name="Changes" comment="Fixed a bug (I think)">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Engine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Engine.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Platform.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Platform.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Player.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,6 +67,19 @@
       <option name="presentableId" value="Default" />
       <updated>1705322469996</updated>
     </task>
+    <task id="LOCAL−00001" summary="Realized regularly committing changes is a good thing">
+      <created>1705408742368</created>
+      <option name="number" value="LOCAL−00001" />
+      <option name="presentableId" value="LOCAL−00001" />
+      <updated>1705408742368</updated>
+    </task>
+    <task id="LOCAL−00002" summary="Fixed a bug (I think)">
+      <created>1705480590485</created>
+      <option name="number" value="LOCAL−00002" />
+      <option name="presentableId" value="LOCAL−00002" />
+      <updated>1705480590485</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -86,5 +92,11 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Realized regularly committing changes is a good thing" />
+    <MESSAGE value="turning is no longer instaint" />
+    <MESSAGE value="Fixed a bug (I think)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed a bug (I think)" />
   </component>
 </project>

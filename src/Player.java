@@ -10,11 +10,13 @@ public class Player {
     private int x = 50;
     private int y = 100;
     private int movementSpeed = 1;
-    private int jumpSpeed = 10;
+    private int jumpSpeed = -20;
+    private int gravity = 1;
+    private int maxFallingSpeed = 10;
+    private boolean grounded;
     private int speedX = 0;
     private int speedY = 0;
     private int speedCap = 7;
-    private boolean grounded;
 
 
     public Player(Game game){
@@ -36,8 +38,13 @@ public class Player {
         } else if (speedX > 0 && (speedX - movementSpeed >= 0)) speedX-= movementSpeed;
         else if (speedX < 0 && (speedX + movementSpeed <= 0)) speedX += movementSpeed;
         else speedX = 0;
-       // KeyEvent.VK_SPACE
-        //fix permenantly moveing left and right
+        if (keys.contains(KeyEvent.VK_SPACE) && grounded) {
+            speedY = jumpSpeed;
+            grounded = false;
+        }
+        if (speedY <= maxFallingSpeed)speedY += gravity;
+
+
     }
     public void updatePlayer(){
         x+=speedX;
@@ -52,7 +59,20 @@ public class Player {
         return new int[]{x, y, width, height};
     }
 
-    public void setSpeed(){
-
+    public void setSpeedX(int newSpeed){
+       this.speedX = newSpeed;
     }
+    public void setSpeedY(int newSpeed){
+        this.speedY = newSpeed;
+    }
+    public int getSpeedX(){
+        return x;
+    }
+    public int getSpeedY(){
+        return speedY;
+    }
+    public void setGrounded(boolean change){
+        grounded = change;
+    }
+
 }

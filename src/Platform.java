@@ -33,4 +33,8 @@ public class Platform {
         } else g.setColor(Color.green);
         g.fillRect(x, y, width, height);
     }
+
+    public int[] getPlatformCollision(){
+        return new int[] {x, y, width, height};
+    }
 }
