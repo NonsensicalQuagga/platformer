@@ -10,7 +10,7 @@ public class Player {
     private int x = 50;
     private int y = 500;
     private int movementSpeed = 1;
-    private int jumpSpeed = -15;
+    private int jumpSpeed = -10;
     private int gravity = 1;
     private int maxFallingSpeed = 10;
     private boolean grounded;
@@ -28,16 +28,22 @@ public class Player {
 
     public void updatePlayerSpeed(ArrayList keys){
         if (keys.contains(KeyEvent.VK_A) || keys.contains(KeyEvent.VK_D)){
-            if(keys.contains(KeyEvent.VK_A) && x > 0){
+            if(keys.contains(KeyEvent.VK_A)){
                 if(speedX > -speedCap) speedX-=movementSpeed;
-
+                if (x <= 0){
+                    speedX = 0;
+                    x = 0;
+                }
             }
-            if(keys.contains(KeyEvent.VK_D) && x + width < game.WIDTH){
+            if(keys.contains(KeyEvent.VK_D)){
                 if(speedX < speedCap) speedX+=movementSpeed;
-
+                if (x + width>= game.WIDTH){
+                    speedX = 0;
+                    x = game.WIDTH - width;
+                }
             }
-        } else if (speedX > 0 && (speedX - movementSpeed >= 0)) speedX-= movementSpeed;
-        else if (speedX < 0 && (speedX + movementSpeed <= 0)) speedX += movementSpeed;
+        } else if (speedX > 0 && speedX - movementSpeed >= 0) speedX-= movementSpeed;
+        else if (speedX < 0 && speedX + movementSpeed <= 0) speedX += movementSpeed;
         else speedX = 0;
         if (keys.contains(KeyEvent.VK_SPACE) && grounded) {
             speedY = jumpSpeed;
@@ -46,7 +52,7 @@ public class Player {
         }
         if (keys.contains(KeyEvent.VK_SPACE) ){
             holdJump++;
-            if(holdJump > 2){
+            if(holdJump > 1){
                 holdJump = 0;
                 speedY -= gravity;
             }
@@ -75,7 +81,7 @@ public class Player {
         this.speedY = newSpeed;
     }
     public int getSpeedX(){
-        return x;
+        return speedX;
     }
     public int getSpeedY(){
         return speedY;

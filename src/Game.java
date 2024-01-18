@@ -17,7 +17,7 @@ public class Game extends Engine {
 
         player.updatePlayerSpeed(keys);
         for(Platform i : platforms){
-            platformCollision(playerPosition, i);
+            platformCollision(this.player, i);
 
         }
         player.updatePlayer();
@@ -33,12 +33,22 @@ public class Game extends Engine {
         player.drawPlayer(g);
         }
 
-    public void platformCollision(int[] player, Platform platform){
+    public void platformCollision(Player player, Platform platform){
         int[] platformPosition = platform.getPlatformCollision();
-        if (player[1] + player[3] + this.player.getSpeedY() >= platformPosition[1] && this.player.getSpeedY() >= 0){
-            this.player.setSpeedY(0);
-            this.player.setGrounded(true);
-            this.player.setPositionY(platformPosition[1]- player[3]);
+        int[] playerPosition = player.getPosition();
+        int playerSpeedX = player.getSpeedX();
+        int playerSpeedY = player.getSpeedY();
+             if ( playerPosition[0] + playerSpeedX <= platformPosition[0] + platformPosition[2] &&
+                     playerPosition[0] + playerPosition[2] + playerSpeedX >= platformPosition[0] &&
+                     playerPosition[1] + playerSpeedY <= platformPosition[1] + platformPosition[3] &&
+                     playerPosition[1] + playerPosition[3] + playerSpeedY >= platformPosition[1]) {
+            if (playerSpeedY > 0){
+            player.setSpeedY(0);
+            player.setGrounded(true);
+            player.setPositionY(platformPosition[1] - playerPosition[3]);
+            }
+
+
         }
     }
 }
