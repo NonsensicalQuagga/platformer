@@ -59,7 +59,7 @@ public class Player {
         }else holdJump = 0;
         if (speedY <= maxFallingSpeed)speedY += gravity;
 
-
+        grounded = false;
     }
     public void updatePlayer(){
         x+=speedX;
