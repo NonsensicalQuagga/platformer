@@ -30,7 +30,7 @@ public class Platform {
     public void drawPlatform(Graphics g){
         if(color.length >= 3){
         g.setColor(new Color(color[0], color[1], color[2]));
-        } else g.setColor(Color.green);
+        } else g.setColor(Color.pink);
         g.fillRect(x, y, width, height);
     }
 

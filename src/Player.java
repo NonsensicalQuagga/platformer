@@ -90,10 +90,13 @@ public class Player {
     }
     public void setGrounded(boolean change){
         grounded = change;
-        coyoteFrames = 5;
+        coyoteFrames = 3;
     }
     public void setPositionY(int newPosition){
         y = newPosition;
+    }
+    public void setPositionX(int newPosition){
+        x = newPosition;
     }
 
 }
