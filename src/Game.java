@@ -10,6 +10,7 @@ public class Game extends Engine {
     public Game(int w, int h)  {
         super(w,h);
     platforms.add(new Platform(this, 0, HEIGHT - HEIGHT/8, WIDTH, HEIGHT, new int[] {10, 255, 30 }));
+    platforms.add(new Platform(this, 200, 620, 100, 20, new int[] {10, 40, 255 }));
     }
 
     public void update() {
@@ -42,10 +43,11 @@ public class Game extends Engine {
                      playerPosition[0] + playerPosition[2] + playerSpeedX >= platformPosition[0] &&
                      playerPosition[1] + playerSpeedY <= platformPosition[1] + platformPosition[3] &&
                      playerPosition[1] + playerPosition[3] + playerSpeedY >= platformPosition[1]) {
-            if (playerSpeedY > 0){
-            player.setSpeedY(0);
-            player.setGrounded(true);
-            player.setPositionY(platformPosition[1] - playerPosition[3]);
+             boolean collidingTop = (playerSpeedY >= 0 && playerPosition[1] + playerPosition[3] <= platformPosition[1] && playerPosition[1] + playerPosition[3] + playerSpeedY >= platformPosition[1]);
+             if (collidingTop){
+             player.setSpeedY(0);
+             player.setGrounded(true);
+             player.setPositionY(platformPosition[1] - playerPosition[3]);
             }
 
 
