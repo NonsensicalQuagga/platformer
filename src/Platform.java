@@ -7,7 +7,7 @@ public class Platform {
     private int width;
     private int height;
     private Game game;
-    private int[] color;
+    private int[] color = new int[]{};
 
     public Platform(Game game, int x, int y, int width, int height){
         this.game = game;

@@ -3,6 +3,10 @@ public class SemisolidPlatform extends Platform {
         super(game, x, y, width, height, color);
 
     }
+    public SemisolidPlatform (Game game, int x, int y, int width, int height){
+        super(game, x, y, width, height);
+
+    }
 
     public void platformCollision(Player player){
         int[] platformPosition = this.getPlatformCollision();
