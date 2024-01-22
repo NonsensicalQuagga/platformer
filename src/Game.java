@@ -10,7 +10,7 @@ public class Game extends Engine {
     public Game(int w, int h)  {
         super(w,h);
     platforms.add(new Platform(this, 0, HEIGHT - HEIGHT/8, WIDTH, HEIGHT, new int[] {10, 255, 30 }));
-    platforms.add(new Platform(this, 200, 620, 100, 20, new int[] {10, 40, 255 }));
+    platforms.add(new Platform(this, 200, 620, 100, 5, new int[] {10, 40, 255 }));
     }
 
     public void update() {

@@ -10,10 +10,11 @@ public class Player {
     private int x = 50;
     private int y = 500;
     private int movementSpeed = 1;
-    private int jumpSpeed = -10;
+    private int jumpSpeed = -11;
     private int gravity = 1;
     private int maxFallingSpeed = 10;
     private boolean grounded;
+    private int coyoteFrames;
     private int holdJump;
     private int speedX = 0;
     private int speedY = 0;
@@ -59,7 +60,8 @@ public class Player {
         }else holdJump = 0;
         if (speedY <= maxFallingSpeed)speedY += gravity;
 
-        grounded = false;
+       if (coyoteFrames <= 0)grounded = false;
+            else coyoteFrames--;
     }
     public void updatePlayer(){
         x+=speedX;
@@ -88,6 +90,7 @@ public class Player {
     }
     public void setGrounded(boolean change){
         grounded = change;
+        coyoteFrames = 5;
     }
     public void setPositionY(int newPosition){
         y = newPosition;
