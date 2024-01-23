@@ -12,13 +12,14 @@ public class Player {
     private int movementSpeed = 1;
     private int jumpSpeed = -11;
     private int gravity = 1;
-    private int maxFallingSpeed = 10;
+    private int maxFallingSpeed = 9;
     private boolean grounded;
     private int coyoteFrames;
     private int holdJump;
     private int speedX = 0;
     private int speedY = 0;
     private int speedCap = 7;
+    private int[] spawnPosition = new int[] {50, 500};
 
 
     public Player(Game game){
@@ -58,11 +59,17 @@ public class Player {
                 speedY -= gravity;
             }
         }else holdJump = 0;
+
         if (speedY <= maxFallingSpeed)speedY += gravity;
 
        if (coyoteFrames <= 0)grounded = false;
             else coyoteFrames--;
     }
+    public void die(){
+        x = spawnPosition[0];
+        y = spawnPosition[1];
+    }
+
     public void updatePlayer(){
         x+=speedX;
         y+=speedY;
@@ -75,7 +82,6 @@ public class Player {
     public int[] getPosition(){
         return new int[]{x, y, width, height};
     }
-
     public void setSpeedX(int newSpeed){
        this.speedX = newSpeed;
     }
@@ -91,6 +97,7 @@ public class Player {
     public void setGrounded(boolean change){
         grounded = change;
         coyoteFrames = 3;
+        holdJump = 0;
     }
     public void setPositionY(int newPosition){
         y = newPosition;
@@ -98,5 +105,7 @@ public class Player {
     public void setPositionX(int newPosition){
         x = newPosition;
     }
-
+    public void setSpawnPosition(int[] newSpawnPosition){
+        spawnPosition = newSpawnPosition;
+    }
 }

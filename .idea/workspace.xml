@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="277aecc0-58ea-498e-b8d1-4b326cc23209" name="Changes" comment="Fixed potential error with Platform color">
-      <change afterPath="$PROJECT_DIR$/src/SolidPlatform.java" afterDir="false" />
+    <list default="true" id="277aecc0-58ea-498e-b8d1-4b326cc23209" name="Changes" comment="optimised SemisolidPlatform">
+      <change afterPath="$PROJECT_DIR$/src/Level.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Spike.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Platform.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Platform.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Player.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -133,7 +133,19 @@
       <option name="presentableId" value="LOCAL−00011" />
       <updated>1705923936540</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL−00012" summary="made SolidPlatform">
+      <created>1705927565167</created>
+      <option name="number" value="LOCAL−00012" />
+      <option name="presentableId" value="LOCAL−00012" />
+      <updated>1705927565167</updated>
+    </task>
+    <task id="LOCAL−00013" summary="optimised SemisolidPlatform">
+      <created>1705927774542</created>
+      <option name="number" value="LOCAL−00013" />
+      <option name="presentableId" value="LOCAL−00013" />
+      <updated>1705927774542</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -160,6 +172,8 @@
     <MESSAGE value="removed redundant code" />
     <MESSAGE value="Changed to platforms checking collision and not Game" />
     <MESSAGE value="Fixed potential error with Platform color" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed potential error with Platform color" />
+    <MESSAGE value="made SolidPlatform" />
+    <MESSAGE value="optimised SemisolidPlatform" />
+    <option name="LAST_COMMIT_MESSAGE" value="optimised SemisolidPlatform" />
   </component>
 </project>
