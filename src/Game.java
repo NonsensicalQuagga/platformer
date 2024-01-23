@@ -2,8 +2,6 @@ import java.awt.*;
 import java.util.ArrayList;
 
 public class Game extends Engine {
-
-    Engine e;
     private Player player = new Player(this);
     private ArrayList<SemisolidPlatform> semisolidPlatforms = new ArrayList<SemisolidPlatform>();
     private ArrayList<SolidPlatform> solidPlatforms = new ArrayList<SolidPlatform>();
@@ -21,7 +19,6 @@ public class Game extends Engine {
     }
 
     public void update() {
-        int[] playerPosition = player.getPosition();
 
         player.updatePlayerSpeed(keys);
         for(SemisolidPlatform i : semisolidPlatforms){
