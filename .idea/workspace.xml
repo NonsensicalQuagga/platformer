@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="277aecc0-58ea-498e-b8d1-4b326cc23209" name="Changes" comment="optimised SemisolidPlatform">
+    <list default="true" id="277aecc0-58ea-498e-b8d1-4b326cc23209" name="Changes" comment="slightly changed spike behaviour">
       <change afterPath="$PROJECT_DIR$/src/Level.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Spike.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Spike.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Spike.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -145,7 +145,25 @@
       <option name="presentableId" value="LOCAL−00013" />
       <updated>1705927774542</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL−00014" summary="Created and implemented spikes">
+      <created>1706014091047</created>
+      <option name="number" value="LOCAL−00014" />
+      <option name="presentableId" value="LOCAL−00014" />
+      <updated>1706014091047</updated>
+    </task>
+    <task id="LOCAL−00015" summary="removed unnecessary code">
+      <created>1706014229233</created>
+      <option name="number" value="LOCAL−00015" />
+      <option name="presentableId" value="LOCAL−00015" />
+      <updated>1706014229233</updated>
+    </task>
+    <task id="LOCAL−00016" summary="slightly changed spike behaviour">
+      <created>1706184685911</created>
+      <option name="number" value="LOCAL−00016" />
+      <option name="presentableId" value="LOCAL−00016" />
+      <updated>1706184685911</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -174,6 +192,20 @@
     <MESSAGE value="Fixed potential error with Platform color" />
     <MESSAGE value="made SolidPlatform" />
     <MESSAGE value="optimised SemisolidPlatform" />
-    <option name="LAST_COMMIT_MESSAGE" value="optimised SemisolidPlatform" />
+    <MESSAGE value="Created and implemented spikes" />
+    <MESSAGE value="removed unnecessary code" />
+    <MESSAGE value="slightly changed spike behaviour" />
+    <option name="LAST_COMMIT_MESSAGE" value="slightly changed spike behaviour" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Player.java</url>
+          <line>103</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

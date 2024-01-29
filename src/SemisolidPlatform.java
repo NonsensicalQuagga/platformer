@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class SemisolidPlatform extends Platform {
     public SemisolidPlatform (Game game, int x, int y, int width, int height, int[] color){
         super(game, x, y, width, height, color);
@@ -10,9 +12,10 @@ public class SemisolidPlatform extends Platform {
 
     public void platformCollision(Player player){
         int[] platformPosition = this.getPlatformCollision();
-        int[] playerPosition = player.getPosition();
-        int playerSpeedX = player.getSpeedX();
-        int playerSpeedY = player.getSpeedY();
+        ArrayList tempPosition = player.getPosition();
+        int[] playerPosition = new int[] {(int) Math.floor((double)tempPosition.get(0)),(int) Math.floor((double)tempPosition.get(1)),(int) tempPosition.get(2),(int) tempPosition.get(3),};
+        double playerSpeedX = player.getSpeedX();
+        double playerSpeedY = player.getSpeedY();
         if ( playerPosition[0] + playerSpeedX <= platformPosition[0] + platformPosition[2] &&
                 playerPosition[0] + playerPosition[2] + playerSpeedX >= platformPosition[0] &&
                 playerPosition[1] + playerSpeedY <= platformPosition[1] + platformPosition[3] &&

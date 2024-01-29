@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class Spike extends Platform {
     public int collisionType = 1;
 
@@ -24,9 +26,10 @@ public class Spike extends Platform {
 
     public void platformCollision(Player player) {
         int[] platformPosition = this.getPlatformCollision();
-        int[] playerPosition = player.getPosition();
-        int playerSpeedX = player.getSpeedX();
-        int playerSpeedY = player.getSpeedY();
+        ArrayList tempPosition = player.getPosition();
+        int[] playerPosition = new int[] {(int) Math.floor((double)tempPosition.get(0)),(int) Math.floor((double)tempPosition.get(1)),(int) tempPosition.get(2),(int) tempPosition.get(3),};
+        double playerSpeedX = player.getSpeedX();
+        double playerSpeedY = player.getSpeedY();
         if (playerPosition[0] <= platformPosition[0] + platformPosition[2] &&
                 playerPosition[0] + playerPosition[2] >= platformPosition[0] &&
                 playerPosition[1] <= platformPosition[1] + platformPosition[3] &&
@@ -53,7 +56,6 @@ public class Spike extends Platform {
                     player.die();
                 }
             }
-
         }
     }
 }

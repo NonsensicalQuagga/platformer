@@ -6,18 +6,18 @@ import java.util.ArrayList;
 public class Player {
     private Game game;
     private int width = 32;
-    private int height = 64 ;
-    private int x = 50;
-    private int y = 500;
-    private int movementSpeed = 1;
-    private int jumpSpeed = -11;
-    private int gravity = 1;
+    private int height = 50 ;
+    private double x = 50;
+    private double y = 500;
+    private double movementSpeed = 1;
+    private double jumpSpeed = -11.0;
+    private double gravity = 1;
     private int maxFallingSpeed = 9;
     private boolean grounded;
     private int coyoteFrames;
     private int holdJump;
-    private int speedX = 0;
-    private int speedY = 0;
+    private double speedX = 0;
+    private double speedY = 0;
     private int speedCap = 7;
     private int[] spawnPosition = new int[] {50, 500};
 
@@ -68,6 +68,8 @@ public class Player {
     public void die(){
         x = spawnPosition[0];
         y = spawnPosition[1];
+        speedX = 0;
+        speedY = 0;
     }
 
     public void updatePlayer(){
@@ -76,11 +78,15 @@ public class Player {
     }
     public void drawPlayer(Graphics g){
         g.setColor(Color.red);
-        g.fillRect(x, y, width, height);
+        g.fillRect((int)Math.floor(x),(int)Math.floor(y), width, height);
     }
-
-    public int[] getPosition(){
-        return new int[]{x, y, width, height};
+    public ArrayList getPosition(){
+        ArrayList returns = new ArrayList<>();
+        returns.add(x);
+        returns.add(y);
+        returns.add(width);
+        returns.add(height);
+        return returns;
     }
     public void setSpeedX(int newSpeed){
        this.speedX = newSpeed;
@@ -88,16 +94,16 @@ public class Player {
     public void setSpeedY(int newSpeed){
         this.speedY = newSpeed;
     }
-    public int getSpeedX(){
+    public double getSpeedX(){
         return speedX;
     }
-    public int getSpeedY(){
+    public double getSpeedY(){
         return speedY;
     }
     public void setGrounded(boolean change){
         grounded = change;
         coyoteFrames = 3;
-        holdJump = 0;
+        holdJump = 1;
     }
     public void setPositionY(int newPosition){
         y = newPosition;

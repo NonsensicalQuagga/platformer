@@ -14,8 +14,8 @@ public class Game extends Engine {
     solidPlatforms.add(new SolidPlatform(this, 350, 500, 100, 20, new int[]{30, 200, 200}));
     solidPlatforms.add(new SolidPlatform(this, 430, 450, 20, 70, new int[]{30, 200, 200}));
     solidPlatforms.add(new SolidPlatform(this, 430, 400, 20, 50, new int[]{30, 200, 200}));
-    spikes.add(new Spike(this, 600, 600, 20, 100, new int[]{0,0,0}, 2));
-    spikes.add(new Spike(this, 550, 600, 50, 20, new int[]{0,0,0}, 4));
+    spikes.add(new Spike(this, 600, 600, 20, 100, new int[]{0,0,0}, 3));
+    spikes.add(new Spike(this, 550, 600, 50, 20, new int[]{0,0,0}, 1));
     }
 
     public void update() {
