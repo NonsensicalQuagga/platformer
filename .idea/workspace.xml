@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="277aecc0-58ea-498e-b8d1-4b326cc23209" name="Changes" comment="slightly changed spike behaviour">
-      <change afterPath="$PROJECT_DIR$/src/Level.java" afterDir="false" />
+    <list default="true" id="277aecc0-58ea-498e-b8d1-4b326cc23209" name="Changes" comment="changed a lot of integers to double">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Platform.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Platform.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SemisolidPlatform.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SemisolidPlatform.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SolidPlatform.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SolidPlatform.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Spike.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Spike.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -163,7 +164,13 @@
       <option name="presentableId" value="LOCAL−00016" />
       <updated>1706184685911</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL−00017" summary="changed a lot of integers to double">
+      <created>1706533101054</created>
+      <option name="number" value="LOCAL−00017" />
+      <option name="presentableId" value="LOCAL−00017" />
+      <updated>1706533101054</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -195,14 +202,15 @@
     <MESSAGE value="Created and implemented spikes" />
     <MESSAGE value="removed unnecessary code" />
     <MESSAGE value="slightly changed spike behaviour" />
-    <option name="LAST_COMMIT_MESSAGE" value="slightly changed spike behaviour" />
+    <MESSAGE value="changed a lot of integers to double" />
+    <option name="LAST_COMMIT_MESSAGE" value="changed a lot of integers to double" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/Player.java</url>
-          <line>103</line>
+          <line>98</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>

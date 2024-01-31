@@ -11,9 +11,8 @@ public class SemisolidPlatform extends Platform {
     }
 
     public void platformCollision(Player player){
-        int[] platformPosition = this.getPlatformCollision();
-        ArrayList tempPosition = player.getPosition();
-        int[] playerPosition = new int[] {(int) Math.floor((double)tempPosition.get(0)),(int) Math.floor((double)tempPosition.get(1)),(int) tempPosition.get(2),(int) tempPosition.get(3),};
+        double[] platformPosition = this.getPlatformCollision();
+        double[] playerPosition = player.getPosition();
         double playerSpeedX = player.getSpeedX();
         double playerSpeedY = player.getSpeedY();
         if ( playerPosition[0] + playerSpeedX <= platformPosition[0] + platformPosition[2] &&

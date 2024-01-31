@@ -80,13 +80,8 @@ public class Player {
         g.setColor(Color.red);
         g.fillRect((int)Math.floor(x),(int)Math.floor(y), width, height);
     }
-    public ArrayList getPosition(){
-        ArrayList returns = new ArrayList<>();
-        returns.add(x);
-        returns.add(y);
-        returns.add(width);
-        returns.add(height);
-        return returns;
+    public double[] getPosition(){
+        return new double[] {x, y, width ,height};
     }
     public void setSpeedX(int newSpeed){
        this.speedX = newSpeed;
@@ -105,10 +100,10 @@ public class Player {
         coyoteFrames = 3;
         holdJump = 1;
     }
-    public void setPositionY(int newPosition){
+    public void setPositionY(double newPosition){
         y = newPosition;
     }
-    public void setPositionX(int newPosition){
+    public void setPositionX(double newPosition){
         x = newPosition;
     }
     public void setSpawnPosition(int[] newSpawnPosition){

@@ -2,14 +2,14 @@ import java.awt.*;
 
 public class Platform {
 
-    private int x;
-    private int y;
+    private double x;
+    private double y;
     private int width;
     private int height;
     private Game game;
     private int[] color = new int[]{};
 
-    public Platform(Game game, int x, int y, int width, int height){
+    public Platform(Game game, double x, double y, int width, int height){
         this.game = game;
         this.x = x;
         this.y = y;
@@ -18,7 +18,7 @@ public class Platform {
 
     }
 
-    public Platform(Game game, int x, int y, int width, int height, int[] color){
+    public Platform(Game game, double x, double y, int width, int height, int[] color){
         this.game = game;
         this.x = x;
         this.y = y;
@@ -31,10 +31,10 @@ public class Platform {
         if(color.length >= 3){
         g.setColor(new Color(color[0], color[1], color[2]));
         } else g.setColor(Color.pink);
-        g.fillRect(x, y, width, height);
+        g.fillRect((int)Math.floor(x), (int)Math.floor(y), width, height);
     }
 
-    public int[] getPlatformCollision(){
-        return new int[] {x, y, width, height};
+    public double[] getPlatformCollision(){
+        return new double[] {x, y, width, height};
     }
 }
