@@ -37,4 +37,7 @@ public class Platform {
     public double[] getPlatformCollision(){
         return new double[] {x, y, width, height};
     }
+    public void platformCollision(Player player){
+        System.out.println("platform type error");
+    }
 }
