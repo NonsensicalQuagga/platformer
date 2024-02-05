@@ -16,6 +16,8 @@ public class Level {
         platforms.add(new Spike(game, 600, 600, 20, 100, new int[]{0,0,0}, 3));
         platforms.add(new Spike(game, 550, 600, 50, 20, new int[]{0,0,0}, 1));
         platforms.add(new SolidPlatform(game, 1500, 650, 100, 200));
+        platforms.add(new SolidPlatform(game, 1800, 700, 1000, 100));
+
 
 
         game.setPlatforms(platforms);

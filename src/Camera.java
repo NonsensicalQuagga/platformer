@@ -25,7 +25,8 @@ public class Camera {
         maxY = levelDimension[1];
         maxX = levelDimension[2];
         maxY = levelDimension[3];
-        double targetX = Math.min(Math.max(playerPosition[0] - halfWidth, minX), maxX);
+        double targetX = Math.min(Math.max(playerPosition[0] - halfWidth, minX), (maxX - width + 9));
+        System.out.println(targetX);
         double targetY =Math.min(Math.max( playerPosition[1] - halfHeight, maxY), minY);
         x += Math.floor((targetX - x) * lerpFactor);
         y += Math.floor((targetY - y) * lerpFactor);

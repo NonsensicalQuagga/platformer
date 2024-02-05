@@ -32,9 +32,9 @@ public class Player {
         if (keys.contains(KeyEvent.VK_A) || keys.contains(KeyEvent.VK_D)){
             if(keys.contains(KeyEvent.VK_A)){
                 if(speedX > -speedCap) speedX-=movementSpeed;
-                if (x <= 0){
+                if (x <= levelDimension[0]){
                     speedX = 0;
-                    x = 0;
+                    x = levelDimension[0];
                 }
             }
             if(keys.contains(KeyEvent.VK_D)){
