@@ -17,12 +17,14 @@ public class Camera {
         height = game.HEIGHT;
 
     }
-    public void update(Player player){
+    public void update(Player player, int[] levelDimension){
         double halfWidth = width/2;
         double halfHeight = height/2;
         double[] playerPosition = player.getPosition();
-        maxX = 2000;
-        maxY = -100;
+        minX = levelDimension[0];
+        maxY = levelDimension[1];
+        maxX = levelDimension[2];
+        maxY = levelDimension[3];
         double targetX = Math.min(Math.max(playerPosition[0] - halfWidth, minX), maxX);
         double targetY =Math.min(Math.max( playerPosition[1] - halfHeight, maxY), minY);
         x += Math.floor((targetX - x) * lerpFactor);

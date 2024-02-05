@@ -28,7 +28,7 @@ public class Player {
 
     }
 
-    public void updatePlayerSpeed(ArrayList keys){
+    public void updatePlayerSpeed(ArrayList keys, int[] levelDimension){
         if (keys.contains(KeyEvent.VK_A) || keys.contains(KeyEvent.VK_D)){
             if(keys.contains(KeyEvent.VK_A)){
                 if(speedX > -speedCap) speedX-=movementSpeed;
@@ -39,9 +39,9 @@ public class Player {
             }
             if(keys.contains(KeyEvent.VK_D)){
                 if(speedX < speedCap) speedX+=movementSpeed;
-                if (x + width>= game.WIDTH){
+                if (x + width>= levelDimension[2]){
                     speedX = 0;
-                    x = game.WIDTH - width;
+                    x = levelDimension[2] - width;
                 }
             }
         } else if (speedX > 0 && speedX - movementSpeed >= 0) speedX-= movementSpeed;
@@ -64,6 +64,8 @@ public class Player {
 
        if (coyoteFrames <= 0)grounded = false;
             else coyoteFrames--;
+
+       if (y > levelDimension[4]) die();
     }
     public void die(){
         x = spawnPosition[0];
