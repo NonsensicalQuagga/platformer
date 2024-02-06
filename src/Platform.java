@@ -7,7 +7,7 @@ public class Platform {
     private int width;
     private int height;
     private Game game;
-    private int[] color = new int[]{};
+    private int[] color = new int[]{255, 200, 200};
 
     public Platform(Game game, double x, double y, int width, int height){
         this.game = game;
@@ -28,9 +28,7 @@ public class Platform {
     }
 
     public void drawPlatform(Graphics g){
-        if(color.length >= 3){
         g.setColor(new Color(color[0], color[1], color[2]));
-        } else g.setColor(Color.pink);
         g.fillRect((int)Math.floor(x), (int)Math.floor(y), width, height);
     }
 

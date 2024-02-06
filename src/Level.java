@@ -21,7 +21,7 @@ public class Level {
 
 
         game.setPlatforms(platforms);
-        game.setLevelDimension(new int[] {0,0, 2000, -100, game.HEIGHT});
+        game.setLevelDimension(new int[] {0,0, 2100, -100, game.HEIGHT});
         // Value 5 is for kill plain at the bottom of the screen. Sees use in player.update
     }
 }
