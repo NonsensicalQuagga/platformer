@@ -19,6 +19,7 @@ public class Player {
     private double speedX = 0;
     private double speedY = 0;
     private int speedCap = 7;
+    private double friction = 1.5;
     private int[] spawnPosition = new int[] {50, 500};
 
 
@@ -31,22 +32,31 @@ public class Player {
     public void updatePlayerSpeed(ArrayList keys, int[] levelDimension){
         if (keys.contains(KeyEvent.VK_A) || keys.contains(KeyEvent.VK_D)){
             if(keys.contains(KeyEvent.VK_A)){
-                if(speedX > -speedCap) speedX-=movementSpeed;
+                if(speedX > -speedCap){
+                    speedX-=movementSpeed;
+                    if (speedX < -speedCap) speedX = -speedCap;
+                }
                 if (x <= levelDimension[0]){
                     speedX = 0;
                     x = levelDimension[0];
                 }
-            }
+            }else if (speedX < 0 && speedX + movementSpeed <= 0) speedX += friction;
             if(keys.contains(KeyEvent.VK_D)){
-                if(speedX < speedCap) speedX+=movementSpeed;
+                if(speedX < speedCap){
+                    speedX+=movementSpeed;
+                    if (speedX > speedCap) speedX = speedCap;
+                }
                 if (x + width>= levelDimension[2]){
                     speedX = 0;
                     x = levelDimension[2] - width;
                 }
-            }
-        } else if (speedX > 0 && speedX - movementSpeed >= 0) speedX-= movementSpeed;
-        else if (speedX < 0 && speedX + movementSpeed <= 0) speedX += movementSpeed;
+            } else if (speedX > 0 && speedX - movementSpeed >= 0) speedX-= friction;
+
+
+        } else if (speedX > 0 && speedX - movementSpeed >= 0) speedX-= friction;
+        else if (speedX < 0 && speedX + movementSpeed <= 0) speedX += friction;
         else speedX = 0;
+        System.out.println(speedX);
         if (keys.contains(KeyEvent.VK_SPACE) && grounded) {
             speedY = jumpSpeed;
             grounded = false;
@@ -110,5 +120,11 @@ public class Player {
     }
     public void setSpawnPosition(int[] newSpawnPosition){
         spawnPosition = newSpawnPosition;
+    }
+    public void setFriction(int friction){
+        this.friction = friction;
+    }
+    public void resetFriction(){
+        friction = 1.5;
     }
 }
