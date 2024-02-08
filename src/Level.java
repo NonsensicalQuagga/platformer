@@ -17,11 +17,12 @@ public class Level {
         platforms.add(new Spike(game, 550, 600, 50, 20, new int[]{0,0,0}, 1));
         platforms.add(new SolidPlatform(game, 1500, 650, 100, 200));
         platforms.add(new SolidPlatform(game, 1800, 700, 1000, 100));
+        platforms.add(new SolidPlatform(game, 100, 300, 100, 20));
 
 
 
         game.setPlatforms(platforms);
-        game.setLevelDimension(new int[] {0,0, 2100, -100, game.HEIGHT});
+        game.setLevelDimension(new int[] {0,0, 2100, -300, game.HEIGHT});
         // Value 5 is for kill plain at the bottom of the screen. Sees use in player.update
     }
 }

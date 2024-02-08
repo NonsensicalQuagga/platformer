@@ -60,7 +60,7 @@ public class Engine extends Canvas implements Runnable {
     public void render() {
         bs = getBufferStrategy();
         if (bs == null) {
-            createBufferStrategy(3);
+            createBufferStrategy(2);
             return;
         }
         Graphics g = bs.getDrawGraphics();

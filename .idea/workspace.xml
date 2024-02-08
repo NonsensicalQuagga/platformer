@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="277aecc0-58ea-498e-b8d1-4b326cc23209" name="Changes" comment="dumb magical number :(">
+    <list default="true" id="277aecc0-58ea-498e-b8d1-4b326cc23209" name="Changes" comment="optimized platforms with default color">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Camera.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Camera.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Engine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Engine.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Level.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Level.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Platform.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Platform.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,7 +35,7 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/code/Åk_3/oopbreakout-NonsensicalQuagga",
+    "last_opened_file_path": "C:/code/GA_PM1",
     "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable"
   }
 }]]></component>
@@ -43,9 +44,16 @@
       <recent name="C:\code\platformer\image" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Start">
     <configuration name="Start" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Start" />
+      <module name="platformer" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="test" />
       <module name="platformer" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -54,6 +62,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Start" />
+        <item itemvalue="Application.test" />
       </list>
     </recent_temporary>
   </component>
@@ -192,7 +201,13 @@
       <option name="presentableId" value="LOCAL−00021" />
       <updated>1707139811451</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL−00022" summary="optimized platforms with default color">
+      <created>1707213947039</created>
+      <option name="number" value="LOCAL−00022" />
+      <option name="presentableId" value="LOCAL−00022" />
+      <updated>1707213947039</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -229,7 +244,8 @@
     <MESSAGE value="Functional camera and slight platform optimization" />
     <MESSAGE value="Proper level dimension variables instead of fixed dimensions" />
     <MESSAGE value="dumb magical number :(" />
-    <option name="LAST_COMMIT_MESSAGE" value="dumb magical number :(" />
+    <MESSAGE value="optimized platforms with default color" />
+    <option name="LAST_COMMIT_MESSAGE" value="optimized platforms with default color" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
