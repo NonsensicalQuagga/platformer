@@ -56,7 +56,6 @@ public class Player {
         } else if (speedX > 0 && speedX - movementSpeed >= 0) speedX-= friction;
         else if (speedX < 0 && speedX + movementSpeed <= 0) speedX += friction;
         else speedX = 0;
-        System.out.println(speedX);
         if (keys.contains(KeyEvent.VK_SPACE) && grounded) {
             speedY = jumpSpeed;
             grounded = false;
