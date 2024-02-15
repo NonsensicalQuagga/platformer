@@ -15,10 +15,11 @@ public class Level {
         platforms.add(new SolidPlatform(game, 430, 400, 20, 50, new int[]{30, 200, 200}));
         platforms.add(new Spike(game, 600, 600, 20, 100, new int[]{0,0,0}, 3));
         platforms.add(new Spike(game, 550, 600, 50, 20, new int[]{0,0,0}, 1));
-        platforms.add(new SolidPlatform(game, 1500, 650, 100, 200));
+        platforms.add(new Bouncepad(game, 1400, 700, 22, 10, new int[]{200, 50, 200}));
         platforms.add(new SolidPlatform(game, 1800, 700, 1000, 100));
         platforms.add(new SolidPlatform(game, 100, 180, 100, 20));
         platforms.add(new Bouncepad(game, 200, 400, 40, 20, new int[]{200, 50, 200}));
+
 
 
 
