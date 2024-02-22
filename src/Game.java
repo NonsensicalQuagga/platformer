@@ -9,7 +9,7 @@ public class Game extends Engine {
 
     public Game(int w, int h)  {
         super(w,h);
-        Level.Level1(this);
+        Level.Level2(this, player);
     }
 
     public void update() {

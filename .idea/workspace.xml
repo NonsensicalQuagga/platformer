@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="277aecc0-58ea-498e-b8d1-4b326cc23209" name="Changes" comment="Implemented friction and made turns tighter">
+    <list default="true" id="277aecc0-58ea-498e-b8d1-4b326cc23209" name="Changes" comment="Added a bouncepad as per Linus's request">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Camera.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Camera.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Level.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Level.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Player.java" afterDir="false" />
     </list>
@@ -35,6 +37,9 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/code/GA_PM1&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.github.ui.GithubSettingsConfigurable&quot;
   }
 }</component>
@@ -218,7 +223,19 @@
       <option name="presentableId" value="LOCAL−00024" />
       <updated>1707393696914</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL−00025" summary="Added a bouncepad as per Linus's request">
+      <created>1707742056513</created>
+      <option name="number" value="LOCAL−00025" />
+      <option name="presentableId" value="LOCAL−00025" />
+      <updated>1707742056513</updated>
+    </task>
+    <task id="LOCAL−00026" summary="Added a bouncepad as per Linus's request">
+      <created>1707996516974</created>
+      <option name="number" value="LOCAL−00026" />
+      <option name="presentableId" value="LOCAL−00026" />
+      <updated>1707996516974</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -233,7 +250,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Realized regularly committing changes is a good thing" />
     <MESSAGE value="turning is no longer instaint" />
     <MESSAGE value="Fixed a bug (I think)" />
     <MESSAGE value="Added collision for the floor and jumping" />
@@ -258,6 +274,7 @@
     <MESSAGE value="optimized platforms with default color" />
     <MESSAGE value="minor changes" />
     <MESSAGE value="Implemented friction and made turns tighter" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implemented friction and made turns tighter" />
+    <MESSAGE value="Added a bouncepad as per Linus's request" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added a bouncepad as per Linus's request" />
   </component>
 </project>

@@ -21,6 +21,8 @@ public class Player {
     private int speedCap = 7;
     private double friction = 1.5;
     private int[] spawnPosition = new int[] {50, 500};
+    private int[] color = new int[] {255, 50, 50};
+    private short dashCharge;
 
 
     public Player(Game game){
@@ -28,8 +30,8 @@ public class Player {
 
 
     }
-
     public void updatePlayerSpeed(ArrayList keys, int[] levelDimension){
+        if (speedY <= maxFallingSpeed)speedY += gravity;
         if (keys.contains(KeyEvent.VK_A) || keys.contains(KeyEvent.VK_D)){
             if(keys.contains(KeyEvent.VK_A)){
                 if(speedX > -speedCap){
@@ -69,10 +71,13 @@ public class Player {
             }
         }else holdJump = 0;
 
-        if (speedY <= maxFallingSpeed)speedY += gravity;
 
        if (coyoteFrames <= 0)grounded = false;
             else coyoteFrames--;
+
+       if (keys.contains(KeyEvent.VK_SHIFT)){
+
+       }
 
        if (y > levelDimension[4]) die();
     }
@@ -82,13 +87,12 @@ public class Player {
         speedX = 0;
         speedY = 0;
     }
-
     public void updatePlayer(){
         x+=speedX;
         y+=speedY;
     }
     public void drawPlayer(Graphics g){
-        g.setColor(Color.red);
+        g.setColor(new Color(color[0], color[1], color[2]));
         g.fillRect((int)Math.floor(x),(int)Math.floor(y), width, height);
     }
     public double[] getPosition(){
@@ -110,6 +114,7 @@ public class Player {
         grounded = change;
         coyoteFrames = 3;
         holdJump = 1;
+
     }
     public void setPositionY(double newPosition){
         y = newPosition;
@@ -126,4 +131,5 @@ public class Player {
     public void resetFriction(){
         friction = 1.5;
     }
+    public void dash(ArrayList keys){}
 }
