@@ -6,7 +6,7 @@ public class Platform {
     private double y;
     private int width;
     private int height;
-    private Game game;
+    public Game game;
     private int[] color = new int[]{255, 200, 200};
 
     public Platform(Game game, double x, double y, int width, int height){

@@ -2,6 +2,7 @@ import java.awt.event.KeyEvent;
 
 public class Bouncepad extends Platform {
     Game game;
+    int bounceStrength = -15;
     public Bouncepad (Game game, int x, int y, int width, int height, int[] color){
         super(game, x, y, width, height, color);
         this.game = game;
@@ -9,6 +10,11 @@ public class Bouncepad extends Platform {
     public Bouncepad (Game game, int x, int y, int width, int height){
         super(game, x, y, width, height);
         this.game = game;
+    }
+    public Bouncepad (Game game, int x, int y, int width, int height, int[] color, int bounceStrength){
+        super(game, x, y, width, height, color);
+        this.game = game;
+        this.bounceStrength = bounceStrength;
     }
 
     public void platformCollision(Player player){
@@ -22,7 +28,7 @@ public class Bouncepad extends Platform {
                 playerPosition[1] + playerPosition[3] + playerSpeedY >= platformPosition[1] &&
                 playerPosition[1] + playerPosition[3] <= platformPosition[1] &&
                 playerPosition[1] + playerPosition[3] + playerSpeedY >= platformPosition[1]) {
-            player.setSpeedY(-15);
+            player.setSpeedY(bounceStrength);
             player.setGrounded(false);
             player.setPositionY(platformPosition[1] - playerPosition[3]);
         }

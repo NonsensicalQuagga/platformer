@@ -1,3 +1,4 @@
+import java.awt.event.KeyEvent;
 import java.util.ArrayList;
 
 public class SemisolidPlatform extends Platform {
@@ -21,9 +22,11 @@ public class SemisolidPlatform extends Platform {
                 playerPosition[1] + playerPosition[3] + playerSpeedY >= platformPosition[1] &&
                 playerPosition[1] + playerPosition[3] <= platformPosition[1] &&
                 playerPosition[1] + playerPosition[3] + playerSpeedY >= platformPosition[1]) {
-                player.setSpeedY(0);
-                player.setGrounded(true);
-                player.setPositionY(platformPosition[1] - playerPosition[3]);
+                if (!(game.keys.contains(KeyEvent.VK_S))){
+                    player.setSpeedY(0);
+                    player.setGrounded(true);
+                    player.setPositionY(platformPosition[1] - playerPosition[3]);
+                }
             }
 
 
