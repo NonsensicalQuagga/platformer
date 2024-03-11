@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="277aecc0-58ea-498e-b8d1-4b326cc23209" name="Changes" comment="Added a bouncepad as per Linus's request">
+    <list default="true" id="277aecc0-58ea-498e-b8d1-4b326cc23209" name="Changes" comment="created a new level and fixed a major bug with the camera">
+      <change afterPath="$PROJECT_DIR$/src/Goal.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Camera.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Camera.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Level.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Level.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Player.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -235,7 +234,13 @@
       <option name="presentableId" value="LOCAL−00026" />
       <updated>1707996516974</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL−00027" summary="created a new level and fixed a major bug with the camera">
+      <created>1708604181734</created>
+      <option name="number" value="LOCAL−00027" />
+      <option name="presentableId" value="LOCAL−00027" />
+      <updated>1708604181735</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -250,7 +255,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="turning is no longer instaint" />
     <MESSAGE value="Fixed a bug (I think)" />
     <MESSAGE value="Added collision for the floor and jumping" />
     <MESSAGE value="Player no longer clips slightly through the top of a platform" />
@@ -275,6 +279,7 @@
     <MESSAGE value="minor changes" />
     <MESSAGE value="Implemented friction and made turns tighter" />
     <MESSAGE value="Added a bouncepad as per Linus's request" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added a bouncepad as per Linus's request" />
+    <MESSAGE value="created a new level and fixed a major bug with the camera" />
+    <option name="LAST_COMMIT_MESSAGE" value="created a new level and fixed a major bug with the camera" />
   </component>
 </project>
