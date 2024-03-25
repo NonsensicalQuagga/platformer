@@ -23,17 +23,17 @@ public class SolidPlatform extends Platform{
             boolean collidingBot = (playerPosition[1] >= platformPosition[1] + platformPosition[3] && playerPosition[1] + playerSpeedY <= platformPosition[1] + platformPosition[3]);
             boolean collidingLeft = (playerPosition[0] + playerPosition[2] <= platformPosition[0] && playerPosition[0] + playerPosition[2] + playerSpeedX >= platformPosition[0]);
             boolean collidingRight = (playerPosition[0] >= platformPosition[0] + platformPosition[2] && playerPosition[0] + playerSpeedX <= platformPosition[0] + platformPosition[2]);
-            if (collidingTop){
-                player.setSpeedY(0);
-                player.setGrounded(true);
-                player.setPositionY(platformPosition[1] - playerPosition[3]);
+            if (collidingLeft){
+                player.setSpeedX(0);
+                player.setPositionX(platformPosition[0] - playerPosition[2]);
 
             } else if (collidingRight){
                 player.setSpeedX(0);
                 player.setPositionX(platformPosition[0] + platformPosition[2]);
-            } else if (collidingLeft){
-                player.setSpeedX(0);
-                player.setPositionX(platformPosition[0] - playerPosition[2]);
+            } else if (collidingTop){
+                    player.setSpeedY(0);
+            player.setGrounded(true);
+            player.setPositionY(platformPosition[1] - playerPosition[3]);
             } else if (collidingBot){
                 player.setSpeedY(0);
                 player.setPositionY(platformPosition[1] + platformPosition[3]);

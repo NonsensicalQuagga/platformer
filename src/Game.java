@@ -1,4 +1,5 @@
 import java.awt.*;
+import java.awt.event.KeyEvent;
 import java.util.ArrayList;
 
 public class Game extends Engine {
@@ -13,6 +14,8 @@ public class Game extends Engine {
     }
 
     public void update() {
+        if (keys.contains(KeyEvent.VK_2)) Level.levelSelect(this,player, 2 );
+        if (keys.contains(KeyEvent.VK_1)) Level.levelSelect(this,player, 1 );
 
         player.updatePlayerSpeed(keys, levelDimension);
         for(Platform i : platforms){

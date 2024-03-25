@@ -73,13 +73,14 @@ public class Level {
             platforms.add(new SolidPlatform(game, 3000, 170, 100, 20, new int[] {30, 200, 200}));
             platforms.add(new Bouncepad(game,3250, 310, 40, 20, new int[] {200, 50, 200}, -21));
             platforms.add(new SolidPlatform(game, 3600, 400, 100, 20, new int[] {30, 200, 200}));
-            platforms.add(new Spike(game, 3700, 250, 100, 20, new int[]{0,0,0}));
+            platforms.add(new Spike(game, 3700, 260, 100, 20, new int[]{0,0,0}));
             platforms.add(new SolidPlatform(game, 3800, 400, 100, 20, new int[] {30, 200, 200}));
-            platforms.add(new Spike(game, 3900, 250, 100, 20, new int[]{0,0,0}));
+            platforms.add(new Spike(game, 3900, 260, 100, 20, new int[]{0,0,0}));
             platforms.add(new SolidPlatform(game, 4000, 400, 100, 20, new int[] {30, 200, 200}));
             platforms.add(new Spike(game, 4150, 280, 100, 20, new int[]{0,0,0}));
             platforms.add(new SolidPlatform(game, 4300, 400, 100, 20, new int[] {30, 200, 200}));
             platforms.add(new Goal(game, 4800, 75, 200, 1000,2, new int[]{255, 16, 240}));
+            platforms.add(new Checkpoint(game, 3100, 20, 50, 50, new int[]{3110, 20}, new int[]{255, 255, 50}));
 
 
             game.setPlatforms(platforms);
@@ -97,9 +98,10 @@ public class Level {
             platforms.add(new Bouncepad(game,0,500,10,10));
             platforms.add(new Bouncepad(game,0,300,10,10));
             platforms.add(new Bouncepad(game,0,100,10,10));
+            platforms.add(new Bouncepad(game, 400, 1000, 100, 20, new int[]{200, 50, 200}, -30));
 
             game.setPlatforms(platforms);
-            game.setLevelDimension(new int[] {-1000, 500, 2100, -300, 2000});
+            game.setLevelDimension(new int[] {-2000, 500, 2100, -300, 1100});
             // Value 5 is for kill plain at the bottom of the screen. Sees use in player.update
             player.setSpawnPosition(new int[] {50, 500});
             player.die();

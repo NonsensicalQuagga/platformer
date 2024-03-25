@@ -63,7 +63,7 @@ public class Player {
             grounded = false;
 
         }
-        if (keys.contains(KeyEvent.VK_SPACE) ){
+        if (keys.contains(KeyEvent.VK_SPACE) && !(keys.contains(KeyEvent.VK_S))){
             holdJump++;
             if(holdJump > 1){
                 holdJump = 0;
