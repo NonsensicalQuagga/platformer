@@ -5,11 +5,11 @@ public class SemisolidPlatform extends Platform {
     public SemisolidPlatform (Game game, int x, int y, int width, int height, int[] color){
         super(game, x, y, width, height, color);
 
-    }
+    }//creates a semisolid platform with a set color
     public SemisolidPlatform (Game game, int x, int y, int width, int height){
         super(game, x, y, width, height);
 
-    }
+    }//creates a semisolid platform with default color
 
     public void platformCollision(Player player){
         double[] platformPosition = this.getPlatformCollision();
@@ -30,8 +30,10 @@ public class SemisolidPlatform extends Platform {
             }
 
 
-        }
-        /*
+        } // checks if player is colliding with the top with of the platform while falling down
+
+
+    /*
 
         Old version of semisolid
 

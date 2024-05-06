@@ -89,7 +89,7 @@ public class Level {
             player.setSpawnPosition(new int[] {50, 600});
             player.die();
 
-        }
+        } //Entirety of the first level
         if (level == 2){
             ArrayList<Platform> platforms = new ArrayList<>();
             platforms.add(new SolidPlatform(game, -1000, 1000, 2000, 100));
@@ -105,6 +105,6 @@ public class Level {
             // Value 5 is for kill plain at the bottom of the screen. Sees use in player.update
             player.setSpawnPosition(new int[] {50, 500});
             player.die();
-        }
+        } //Entirety of the first level
     }
 }

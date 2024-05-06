@@ -5,12 +5,12 @@ public class Goal extends Platform{
         super(game, x, y, width, height, color);
         this.game = game;
         this.nextLevel = nextLevel;
-    }
+    } // creates a goal with a set color and next level.
     public Goal (Game game, int x, int y, int width, int height, int nextLevel){
         super(game, x, y, width, height);
         this.game = game;
         this.nextLevel = nextLevel;
-    }
+    } //creates a goal with default color and a set next level
 
     public void platformCollision(Player player){
         double[] platformPosition = this.getPlatformCollision();
@@ -23,7 +23,7 @@ public class Goal extends Platform{
                 playerPosition[1] + playerPosition[3] + playerSpeedY >= platformPosition[1]) {
             Level.levelSelect(game, player, nextLevel);
         }
-    }
+    } //checks if player is colliding with the goal
 }
 
 

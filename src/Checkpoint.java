@@ -5,12 +5,12 @@ public class Checkpoint extends Platform {
     public Checkpoint (Game game, int x, int y, int width, int height, int[] spawnPosition, int[] color){
         super(game, x, y, width, height, color);
         this.spawnPosition = spawnPosition;
+    } //creates a checkpoint with a set color
 
-    }
     public Checkpoint (Game game, int x, int y, int width, int height, int[] spawnPosition){
         super(game, x, y, width, height);
         this.spawnPosition = spawnPosition;
-    }
+    } //creates a checkpoint with default color
     public void platformCollision(Player player) {
         double[] platformPosition = this.getPlatformCollision();
         double[] playerPosition = player.getPosition();
@@ -22,5 +22,5 @@ public class Checkpoint extends Platform {
                 playerPosition[1] + playerPosition[3] + playerSpeedY >= platformPosition[1]) {
             player.setSpawnPosition(spawnPosition);
         }
-    }
+    } //looks if the player has collided with the checkpoint and then sets the player spawn position
 }

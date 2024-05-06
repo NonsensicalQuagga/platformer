@@ -25,14 +25,17 @@ public class Camera {
         minY = levelDimension[1];
         maxX = levelDimension[2];
         maxY = levelDimension[3];
+
         double targetX = Math.min(Math.max(playerPosition[0] - halfWidth, minX), (maxX - width + 9));
         double targetY = Math.min(Math.max( playerPosition[1] - halfHeight, maxY), minY);
+        // where the camera would like to go
 
         x += Math.floor((targetX - x) * lerpFactor);
         y += Math.floor((targetY - y) * lerpFactor);
+        //smoothly moves the camera to the ideal position
     }
 
     public void apply(Graphics g){
         g.translate((int) -x, (int) -y);
-    }
+    } //applies camera context changes so that everything gets drawn properly
 }

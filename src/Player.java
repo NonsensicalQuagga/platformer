@@ -27,9 +27,8 @@ public class Player {
 
     public Player(Game game){
         this.game = game;
+    } //creates an instance of player
 
-
-    }
     public void updatePlayerSpeed(ArrayList keys, int[] levelDimension){
         if (speedY <= maxFallingSpeed)speedY += gravity;
         if (keys.contains(KeyEvent.VK_A) || keys.contains(KeyEvent.VK_D)){
@@ -80,17 +79,21 @@ public class Player {
        }
 
        if (y > levelDimension[4]) die();
-    }
+    }// everything about how the player's acceleration changes
+    //really should be broken up into different functions
+
     public void die(){
         x = spawnPosition[0];
         y = spawnPosition[1];
         speedX = 0;
         speedY = 0;
-    }
+    } // spawns the player at the set spawnpoint
+
+
     public void updatePlayer(){
         x+=speedX;
         y+=speedY;
-    }
+    } //changes where player is
     public void drawPlayer(Graphics g){
         g.setColor(new Color(color[0], color[1], color[2]));
         g.fillRect((int)Math.floor(x),(int)Math.floor(y), width, height);
@@ -125,11 +128,14 @@ public class Player {
     public void setSpawnPosition(int[] newSpawnPosition){
         spawnPosition = newSpawnPosition;
     }
+
+    //bellow are redundant code from ideas that didn't get implemented
+    /*
     public void setFriction(int friction){
         this.friction = friction;
     }
     public void resetFriction(){
         friction = 1.5;
     }
-    public void dash(ArrayList keys){}
+    public void dash(ArrayList keys){}*/
 }

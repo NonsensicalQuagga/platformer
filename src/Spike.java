@@ -2,27 +2,27 @@ import java.util.ArrayList;
 
 public class Spike extends Platform {
     public int collisionType = 1;
-
+    // Default collision. If player touches the spike the player dies
     public Spike(Game game, int x, int y, int width, int height, int[] color) {
         super(game, x, y, width, height, color);
 
-    }
+    } // creates a spike with a set color and default collision type
 
     public Spike(Game game, int x, int y, int width, int height, int[] color, int collisionType) {
         super(game, x, y, width, height, color);
         this.collisionType = collisionType;
-    }
+    } // creates a spike with a set color and collision type
 
 
     public Spike(Game game, int x, int y, int width, int height) {
         super(game, x, y, width, height);
 
-    }
+    } // creates a spike with default color and collision type
 
     public Spike(Game game, int x, int y, int width, int height, int collisionType) {
         super(game, x, y, width, height);
         this.collisionType = collisionType;
-    }
+    } // creates a spike with a set color and collision type
 
     public void platformCollision(Player player) {
         double[] platformPosition = this.getPlatformCollision();
@@ -35,6 +35,7 @@ public class Spike extends Platform {
                 playerPosition[1] + playerPosition[3] >= platformPosition[1]) {
             if (collisionType == 1) {
                 player.die();
+                // if the player collides with the spike it dies
             } else {
 
                 boolean collidingTop = (playerPosition[1] + playerPosition[3] <= platformPosition[1] && playerPosition[1] + playerPosition[3] + playerSpeedY >= platformPosition[1]);
@@ -56,5 +57,5 @@ public class Spike extends Platform {
                 }
             }
         }
-    }
+    }// checks if player is colliding with the spike
 }

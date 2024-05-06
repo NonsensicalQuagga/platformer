@@ -120,7 +120,7 @@ public class Engine extends Canvas implements Runnable {
         public void keyPressed(KeyEvent e) {
             keys.add( e.getKeyCode());
 
-        }
+        } // Whenever a key is pressed adds the KeyCode to an array
 
         @Override
         public void keyReleased(KeyEvent e) {
@@ -132,7 +132,7 @@ public class Engine extends Canvas implements Runnable {
             }
         keys = temp;
 
-        }
+        } //Whenever a key is released remove the KeyCode from an array
 
     }
 

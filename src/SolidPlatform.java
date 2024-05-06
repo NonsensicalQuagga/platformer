@@ -4,11 +4,11 @@ public class SolidPlatform extends Platform{
     public SolidPlatform (Game game, int x, int y, int width, int height, int[] color){
         super(game, x, y, width, height, color);
 
-    }
+    }//creates a solid platform with a set color
     public SolidPlatform (Game game, int x, int y, int width, int height){
         super(game, x, y, width, height);
 
-    }
+    }//creates a solid platform with default color
 
     public void platformCollision(Player player){
         double[] platformPosition = this.getPlatformCollision();
@@ -43,5 +43,6 @@ public class SolidPlatform extends Platform{
 
 
         }
-    }
+    }// checks if the player is colliding with the platform and then where it is colliding from.
+    // technically incomplete since intersection with other solid platforms can lead to player being unable to move when it should be able to
 }
